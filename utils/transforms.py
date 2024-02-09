@@ -12,7 +12,7 @@ __all__ = ['GroupRandomCrop', 'GroupCenterCrop', 'GroupRandomPad', 'GroupCenterP
 
 class SampleResize(object):
     def __init__(self, size):
-        assert (isinstance(size, collections.Iterable) and len(size) == 2)
+        assert (isinstance(size, collections.abc.Iterable) and len(size) == 2)
         self.size = size
 
     def __call__(self, sample):
